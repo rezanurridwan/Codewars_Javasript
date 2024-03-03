@@ -15,20 +15,11 @@ Numerical Score	Letter Grade
 //Jawaban
 function getGrade(s1,s2,s3){
     let average = (s1+s2+s3) / 3;
-    let result =0;
-    for(let i=0; i<=100; i++){
-        if((s1 + s2 + s3) / 3 < 60){
-            return 'F'
-        } else if ( average >= 90 && average <=100){
-            return 'A'
-        }else if (average >= 80 && average <90){
-            return 'B'
-        }else if (average >= 70 && average / 3 <80){
-            return 'C'
-        }else if (average >= 60 && average / 3 <70){
-            return 'D'
-        }
-    }
-    return result
+
+    if((s1 + s2 + s3) / 3 < 60) return 'F'
+    else if ( average >= 90 && average <=100)return 'A'
+    else if (average >= 80 && average <90)return 'B'
+    else if (average >= 70 && average / 3 <80)return 'C'
+    else if (average >= 60 && average / 3 <70)return 'D'
 }
 console.log(getGrade(65,70,59));
